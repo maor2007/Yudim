@@ -512,6 +512,230 @@ public class Shiur3
 //shiur 4 sheela 3
 
 
+package yudim;
+import java.util.Scanner;
+
+
+public class Shiur3 
+{
+	public static void main(String[] args) 
+	{
+		
+		Scanner scan= new Scanner(System.in);
+		
+		String str;
+		
+		System.out.println("enter a 3 letter word: ");
+		str = scan.next();
+		
+		if(str.charAt(0) == str.charAt(2))
+		{
+			System.out.println("true");
+		}
+		else
+		{
+			System.out.println("false");
+		}
+		
+		
+	}
+
+
+}
+
+
+//shiur 4 sheela 4
+
+package yudim;
+import java.util.Scanner;
+
+
+public class Shiur3 
+{
+	public static void main(String[] args) 
+	{
+		Scanner scan= new Scanner(System.in);
+		System.out.println("enter a 3 letter word: ");
+		String str = scan.next();
+		System.out.println(str.charAt(2)+""+str.charAt(1)+""+str.charAt(0));
+		
+	}
+
+
+}
+
+
+//shiur 4 sheela 5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//מבחן 1
+// שאלה 1
+
+package yudim;
+import java.util.Scanner;
+
+class Shiur3{
+	
+
+	public static void f1(){
+		
+		Scanner scan = new Scanner(System.in);
+		int bigBro;
+		System.out.println("enter big brother age: ");
+		bigBro = scan.nextInt();
+		
+		System.out.println("big bro: " + bigBro);
+		System.out.println("little bro: " + (bigBro - 10));
+		System.out.println("big sister: " + (bigBro - 9));
+		System.out.println("little sister: " + (bigBro - 6));
+		
+		
+	}
+
+	
+	public static void main(String[] args) 
+	{
+		f1();
+		
+	}
+
+
+}
+
+
+//שאלה 2
+
+
+package yudim;
+import java.util.Scanner;
+
+class Shiur3{
+	
+
+	public static void f1(){
+		
+		Scanner scan = new Scanner(System.in);
+		int num;
+		
+		System.out.println("enter 3 digit number: ");
+		num = scan.nextInt();
+		
+		int digit1 = num % 10;
+        int digit2 = (num / 10) % 10;
+        int digit3 = num / 100;
+
+        int reversed = digit1 * 100 + digit2 * 10 + digit3;
+		
+		System.out.println(reversed);
+		
+		
+	}
+
+	
+	public static void main(String[] args) 
+	{
+		f1();
+		
+	}
+
+
+}
+
+
+//שאלה 3
+
+package yudim;
+import java.util.Scanner;
+
+class Shiur3{
+	
+
+	public static void f1(){
+		
+		Scanner scan = new Scanner(System.in);
+		String str1;
+		String str2;
+		
+		
+		System.out.println("enter 2 strings: ");
+		str1 = scan.next();
+		str2 = scan.next();
+		
+		if(str1.length() > str2.length())
+			System.out.println(str2);
+		else
+			System.out.println(str1);
+		
+		String str3 = str2.substring(0, 3);
+		String str4 = str1.substring(0, 3);
+		System.out.println(str3 + " " + str4);
+		
+		if(str1.compareTo(str2) < 0)
+			System.out.println(str2);
+		else
+			System.out.println(str1);
+		
+	}
+
+	
+	public static void main(String[] args) 
+	{
+		f1();
+		
+	}
+
+
+}
+
+
+//
+
+
 
 
 
