@@ -983,8 +983,190 @@ class Shiur3{
 }
 
 
-//shiur 5 sheela 9
+//shiur 6 sheela 1
 
+import java.util.Scanner;
+
+class main{
+
+    public static void f1()
+    {
+        Scanner scan = new Scanner(System.in);
+
+        int i;
+        int sum = 0;
+
+        System.out.println("enter 5 grades: ");
+        for(i = 0; i < 5; i++){
+            int grade = scan.nextInt();
+            sum += grade;
+        }
+        System.out.println("average: " + sum / 5);
+    }
+
+    public static void main(String[] args)
+    {
+
+        f1();
+    }
+    
+}
+
+
+//shiur 6 sheela 2
+
+import java.util.Scanner;
+
+class main{
+
+    public static void f1()
+    {
+        Scanner scan = new Scanner(System.in);
+
+        boolean i = true;
+        String str;
+        int sum = 0;
+        int check = 0;
+
+        System.out.println("enter strings until you press enter: ");
+
+        do {
+
+            str = scan.nextLine();
+            sum += 1;
+            
+        }while(!(str.equals("enter")));
+
+        System.out.println("number of words: " + sum);
+    }
+
+    public static void main(String[] args)
+    {
+
+        f1();
+    }
+
+}
+
+
+//shiur 6 sheela 3
+
+import java.util.Scanner;
+
+class main{
+
+    public static void f1()
+    {
+        Scanner scan = new Scanner(System.in);
+
+        int code = 0;
+        int sum = 0;
+        int attempts = 3;
+
+        System.out.println("enter a 4 digit code: ");
+        code = scan.nextInt();
+
+        System.out.println("enter a code: ");
+        do {
+            sum = scan.nextInt();
+
+            if(sum == code) {
+                System.out.println("how much money? ");
+                attempts = -5;
+            }
+
+            else {
+                attempts -= 1;
+                System.out.println("WRONG! you have " + attempts + " more tries:");
+            }
+            
+            
+        }while(attempts > 0);
+
+        if(attempts == 0)
+            System.out.println("error");
+
+    }
+
+    public static void main(String[] args)
+    {
+
+        f1();
+    }
+
+}
+
+
+//shiur 6 sheela 4
+
+import java.util.Scanner;
+
+class main{
+
+    public static void f1()
+    {
+        Scanner scan = new Scanner(System.in);
+
+        int i = 0;
+        int temp;
+        int sum = 0;
+
+        System.out.println("enter a digit: ");
+        i = scan.nextInt();
+
+        while(i != 0) {
+            temp = i % 10;
+            sum += 1;
+            i = i / 10;
+        }
+
+        System.out.println("number of digits: " + sum);
+    }
+
+    public static void main(String[] args)
+    {
+
+        f1();
+    }
+
+}
+
+
+//shiur 6 sheela 5
+
+import java.util.Scanner;
+
+class main{
+
+    public static int f1()
+    {
+        Scanner scan = new Scanner(System.in);
+
+        int i = 0;
+        int temp;
+        int sum = 0;
+
+        System.out.println("enter a digit: ");
+        i = scan.nextInt();
+
+        while(i != 0) {
+            temp = i % 10;
+            sum += temp;
+            i = i / 10;
+        }
+
+        return sum;
+    }
+
+    public static void main(String[] args)
+    {
+        System.out.println("sum: " + f1());
+    }
+
+}
+
+
+//shiur 6 sheela 6
 
 
 
