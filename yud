@@ -141,7 +141,7 @@ public class Shiur3
 }
 
 
-//shiur 2 sheela 1
+//shiur 3 sheela 1
 
 package yudim;
 import java.util.Scanner;
@@ -1478,10 +1478,67 @@ class main{
 
 //shiur 6 sheela 15
 
+import java.util.Scanner;
+
+class main{
+
+    public static void f1(int height)
+    {
+        int i;
+        int j;
+        int base = height * height + 1;
+        int x1 = height - 1;
+        int x2 = height + 1;
+
+        for(i = 0; i < height; i++)
+        {
+            for(j = 0; j < base; j++)
+            {
+                if (j >= x1 && j <= x2)
+                    System.out.print("*");
+                else
+                    System.out.print(" ");
+            }
+            System.out.println();
+            x1--;
+            x2++;
+        }
+
+    }
+
+    public static void main(String[] args)
+    {
+        f1(7);
+    }
+
+}
 
 
 //shiur 6 sheela 16
 
+import java.util.Scanner;
+
+class main{
+
+    public static void f1(int start, int mana)
+    {
+        int i = 0;
+        int sum = 0;
+
+        for(i = 0; i <= 10; i++)
+        {
+            start = start * mana;
+            System.out.println(start);
+        }
+
+    }
+
+    public static void main(String[] args)
+    {
+        f1(3, 3);
+    }
+
+}
 
 
 //shiur 6 sheela 17 
@@ -1513,7 +1570,86 @@ class main{
 
 //shiur 6 sheela 18
 
+import java.util.Scanner;
 
+class main{
+
+    public static void f1(int num)
+    {
+        int i = 0;
+        int sum = 0;
+        String temp = ("");
+        String binary = ("");
+
+        while(num > 0)
+        {
+            sum = num % 2;
+            temp += sum;
+            num /= 2;
+        }
+
+        for(i = temp.length() - 1; i >= 0; i--)
+        {
+            binary += temp.charAt(i);
+        }
+        System.out.println(binary);
+
+    }
+
+    public static void main(String[] args)
+    {
+        f1(11);
+    }
+
+}
+
+
+//shiur 6 sheela 19
+
+import java.util.Scanner;
+import java.util.Random;
+
+class main{
+
+    public static void f1()
+    {
+        Random r = new Random();
+        int x1, x2, x3, x4, x5, y1, y2, y3, y4, y5, z1, z2, z3, z4, z5, sum, i;
+
+        x1 = r.nextInt(100)+1;
+        x2 = r.nextInt(100)+1;
+        x3 = r.nextInt(100)+1;
+        x4 = r.nextInt(100)+1;
+        x5 = r.nextInt(100)+1;
+        y1 = r.nextInt(100)+1;
+        y2 = r.nextInt(100)+1;
+        y3 = r.nextInt(100)+1;
+        y4 = r.nextInt(100)+1;
+        y5 = r.nextInt(100)+1;
+
+        z1 = x1 + y1;
+        z2 = x2 + y2;
+        z3 = x3 + y3;
+        z4 = x4 + y4;
+        z5 = x5 + y5;
+
+        System.out.println("(" + x1 + "," + y1 + ")");
+        System.out.println("(" + x2 + "," + y2 + ")");
+        System.out.println("(" + x3 + "," + y3 + ")");
+        System.out.println("(" + x4 + "," + y4 + ")");
+        System.out.println("(" + x5 + "," + y5 + ")");
+
+
+    }
+
+    public static void main(String[] args)
+    {
+        f1();
+    }
+
+}
+
+//shiur 6 sheela 20
 
 
 
@@ -1582,7 +1718,44 @@ class main{
 
 //shiur 10 sheela 3
 
+import java.util.Scanner;
 
+class main{
+
+    public static int[] f1(int[] grades)
+    {
+        int i = 0;
+        int[] arr = {100, 0};
+
+        for(i = 0; i < grades.length; i++)
+        {
+            if(grades[i] < arr[0])
+                arr[0] = grades[i];
+        }
+
+        for(i = 0; i < grades.length; i++)
+        {
+            if(grades[i] > arr[1])
+                arr[1] = grades[i];
+        }
+
+        return arr;
+
+    }
+
+    public static void main(String[] args)
+    {
+        int[] arr = {60, 53, 57, 99, 15};
+        int[] result = f1(arr);
+
+        System.out.println("minimum: " + result[0]);
+        System.out.println("maximum: " + result[1]);
+    }
+
+}
+
+
+//shiur 10 sheela 4
 
 
 
