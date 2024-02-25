@@ -643,19 +643,28 @@ class main{
         y4 = r.nextInt(100)+1;
         y5 = r.nextInt(100)+1;
 
-        z1 = x1 + y1;
-        z2 = x2 + y2;
-        z3 = x3 + y3;
-        z4 = x4 + y4;
-        z5 = x5 + y5;
-
         System.out.println("(" + x1 + "," + y1 + ")");
         System.out.println("(" + x2 + "," + y2 + ")");
         System.out.println("(" + x3 + "," + y3 + ")");
         System.out.println("(" + x4 + "," + y4 + ")");
         System.out.println("(" + x5 + "," + y5 + ")");
 
+        z1 = x1 + y1;
+        z2 = x2 + y2;
+        z3 = x3 + y3;
+        z4 = x4 + y4;
+        z5 = x5 + y5;
 
+        if(z1 > z2 && z1 > z3 && z1 > z4 && z1 > z5)
+            System.out.println("closest to (0, 0): " + "(" + x1 + "," + y1 + ")");
+        if(z2 < z1 && z2 < z3 && z2 < z4 && z2 < z5)
+            System.out.println("closest to (0, 0): " + "(" + x2 + "," + y2 + ")");
+        if(z3 < z2 && z3 < z1 && z3 < z4 && z3 < z5)
+            System.out.println("closest to (0, 0): " + "(" + x3 + "," + y3 + ")");
+        if(z4 < z2 && z4 < z3 && z4 < z1 && z4 < z5)
+            System.out.println("closest to (0, 0): " + "(" + x4 + "," + y4 + ")");
+        if(z5 < z2 && z5 < z3 && z5 < z4 && z5 < z1)
+            System.out.println("closest to (0, 0): " + "(" + x5 + "," + y5 + ")");
     }
 
     public static void main(String[] args)
@@ -665,5 +674,67 @@ class main{
 
 }
 
+
 //shiur 6 sheela 20
 
+import java.util.Scanner;
+
+class main{
+
+    public static void f1()
+    {
+        Scanner scan = new Scanner(System.in);
+
+        String pla1, pla2, pla3;
+        int math1, math2, math3, eng1, eng2, eng3, sum1, sum2, sum3;
+
+        System.out.println("enter 3 student names: ");
+        pla1 = scan.nextLine();
+        pla2 = scan.nextLine();
+        pla3 = scan.nextLine();
+        System.out.println("enter student 1 english grades: ");
+        eng1 = scan.nextInt();
+        System.out.println("enter student 1 math grade: ");
+        math1 = scan.nextInt();
+        System.out.println("enter student 2 english grade: ");
+        eng2 = scan.nextInt();
+        System.out.println("enter student 2 math grade: ");
+        math2 = scan.nextInt();
+        System.out.println("enter student 3 english grade: ");
+        eng3 = scan.nextInt();
+        System.out.println("enter student 3 math grade: ");
+        math3 = scan.nextInt();
+
+        if(math1 > math2 && math1 > math3)
+            System.out.println(pla1 + " has the highest grade in math");
+        else if(math2 > math1 && math2 > math3)
+            System.out.println(pla2 + " has the highest grade in math");
+        else if(math3 > math1 && math3 > math2)
+            System.out.println(pla2 + " has the highest grade in math");
+
+        if(eng1 > eng2 && eng1 > eng3)
+            System.out.println(pla1 + " has the highest grade in english");
+        else if(eng2 > eng1 && eng2 > eng3)
+            System.out.println(pla2 + " has the highest grade in english");
+        else if(eng3 > eng1 && eng3 > eng2)
+            System.out.println(pla3 + " has the highest grade in english");
+
+        sum1 = eng1 + math1;
+        sum2 = eng2 + math2;
+        sum3 = eng3 + math3;
+
+        if(sum1 > sum2 && sum1 > sum3)
+            System.out.println(pla1 + " has the highest average");
+        else if(sum2 > sum1 && sum2 > sum3)
+            System.out.println(pla1 + " has the highest average");
+        else if(sum3 > sum1 && sum3 > sum2)
+            System.out.println(pla1 + " has the highest average");
+
+    }
+
+    public static void main(String[] args)
+    {
+        f1();
+    }
+
+}
