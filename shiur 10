@@ -129,6 +129,41 @@ class main{
 
 //shiur 10 sheela 5
 
+import java.util.Scanner;
+import java.util.Random;
+
+class main{
+
+    public static boolean f1()
+    {
+        Random r = new Random();
+        Scanner scan = new Scanner(System.in);
+        int num;
+        int i;
+        int[] nums = {10};
+
+        System.out.println("enter a number between 0-100:");
+        num = scan.nextInt();
+
+        for(i = 0; i < nums.length; i++)
+            nums[i] = r.nextInt(100) + 1;
+
+        for(i = 0; i < nums.length; i++)
+        {
+            if(nums[i] == num)
+                return true;
+        }
+
+        return false;
+    }
+
+    public static void main(String[] args)
+    {
+        System.out.println(f1());
+    }
+
+}
+
 
 //shiur 10 sheela 6
 
