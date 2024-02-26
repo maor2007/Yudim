@@ -199,6 +199,51 @@ class main{
 
 //shiur 10 sheela 7
 
+import java.util.Scanner;
+import java.util.Random;
+
+class main{
+
+    public static void f1()
+    {
+        Random r = new Random();
+
+        int[] random = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+        int i;
+        int biggest = 0;
+        int j;
+
+        for(i = 0; i < random.length; i++)
+            random[i] = r.nextInt(100) + 1;
+
+        for(i = 0; i < random.length; i++)
+        {
+            if(random[i] > biggest)
+            {
+                biggest = random[i];
+                random[i] = random[6];
+            }
+
+        }
+
+        for(i = 0; i < random.length - 1; i++)
+        {
+            System.out.println(random[i]);
+        }
+        System.out.println(biggest);
+
+    }
+
+    public static void main(String[] args)
+    {
+        f1();
+    }
+
+}
+
+
+//shiur 10 sheela 8
+
 
 
 
