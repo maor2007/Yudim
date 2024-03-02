@@ -319,9 +319,54 @@ class main{
 
 
 
-//shiur 10 sheela 12
+//shiur 10 sheela 12/////////////////////////////////////////////////////////////not finished
 
+import java.util.Random;
 
+class main{
+
+    public static void f1(int[] arr)
+    {
+        Random r = new Random();
+        int[] newArr = new int[arr.length] ;
+        int i, j;
+        int num = 65;
+        int newSize = arr.length;
+
+        System.out.println("before:");
+
+        for(i = 0; i < arr.length; i++)
+            System.out.println(arr[i]);
+
+        for(i = 0; i < arr.length; i++)
+        {
+            if(arr[i] == num)
+            {
+                newSize--;
+
+                for(j = i; i < newSize; i++)
+                {
+                    arr[j] = arr[j + 1];
+                }
+            }
+        }
+
+        for (i = 0; i < newSize; i++)
+            newArr[i] = arr[i];
+
+        System.out.println("after:");
+        for(i = 0; i < newSize; i++)
+            System.out.println(newArr[i]);
+
+    }
+
+    public static void main(String[] args)
+    {
+        int[] arr = {1, 2, 65, 34, 87, 56, 99, 44, 21};
+        f1(arr);
+    }
+
+}
 
 
 //shiur 10 sheela 13////////////////////////////////////////////////////////////////not finished
